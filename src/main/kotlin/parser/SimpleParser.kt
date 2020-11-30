@@ -9,7 +9,7 @@ class SimpleParser : Parser {
      * Parsing [rawInputArray] into [UserDataContainer].
      * @return parsing result.
      */
-    override fun parse(rawInputArray: Array<String>): UserDataContainer {
+    override fun parse(rawInputArray: Collection<String>): UserDataContainer {
         val container = UserDataContainer()
         rawInputArray.forEach { row ->
             if (row.isBlank()) {
