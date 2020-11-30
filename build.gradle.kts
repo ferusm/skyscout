@@ -8,6 +8,7 @@ plugins {
 group = "org.example"
 version = "0.1.0-SNAPSHOT"
 
+tasks.withType<Jar> { manifest { attributes(mapOf("Main-Class" to "ApplicationKt")) } }
 tasks.withType<KotlinCompile> { kotlinOptions { jvmTarget = "1.8" } }
 tasks.withType<Test> { useJUnitPlatform() }
 
